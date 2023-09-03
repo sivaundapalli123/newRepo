@@ -1,0 +1,30 @@
+#%RAML 1.0
+title: ordertracking
+version: v1
+baseUri: https://apiname-v1.eu.cloudhub.io/api/{version}
+protocols: [ HTTPS, HTTP ]
+
+mediaType: [application/json, application/xml]
+
+/ORDER:
+ post:
+  body:
+   application/json:
+  responses:
+   200:
+    body:
+     application/json:
+      example:
+       status:200
+        message:SUCCESS.
+/SHIPMENT:
+ post:
+  body:
+   application/xml:
+  responses:
+   200:
+    body:
+     application/xml:
+      example:
+       status:200
+        message:SUCCESS.
